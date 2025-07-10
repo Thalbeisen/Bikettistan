@@ -85,7 +85,7 @@
                     </li>
                     <li class="member roadManager">
                         <div class="govPic">
-                             <img src="../Assets/IMG/Panoramix.jpg" />
+                             <img src="../Assets/IMG/10151.webp" />
                         </div>
                         <div class="govDesc">
                             <h3>Panomanisk</h3>
