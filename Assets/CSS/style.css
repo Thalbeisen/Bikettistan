@@ -1,0 +1,505 @@
+/* Imports Polices */
+
+@import url('https://fonts.googleapis.com/css2?family=My+Soul&family=Bebas+Neue&family=Varela+Round&display=swap');
+
+:root {
+    --pink: #FC0099;
+    --dark: #2F313A;
+    --deg: -86deg;
+    --trans: all 0.4s ease 0s;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#landingVid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+
+#landingStyle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#landingText {
+    font-family: "My Soul", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#landingTextButtonBack {
+    background-color: rgba(119, 32, 183, 0.5);
+    color: white;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    max-width: 600px;
+}
+
+#landingBtn {
+    background-color: #C7037A;
+}
+
+#navStyle {
+    background-color: rgb(119, 32, 183);
+}
+
+.govContainer {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.govContainer *,
+.govContainer *::before,
+.govContainer *::after {
+    box-sizing: border-box;
+}
+
+#govBack {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+
+#govPage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+#govMainContainer {
+    background-color: rgba(119, 32, 183, 0.5);
+    color: white;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    max-width: 600px;
+}
+
+.govTeam {
+    padding: 2em 0 2em 2.5em;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.member {
+    margin: 1.5em 0 0.5em;
+    padding: 0.73em;
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    background: linear-gradient(
+        83deg,
+        var(--pink) 0 97%,
+        #FFF0 calc(97% + 1px) 100%
+    );
+    transform: scale(0.85);
+    transition: var(--trans);
+}
+
+.member:nth-of-type(even) {
+    text-align: right;
+    background: linear-gradient(
+        -83deg,
+        var(--pink) 0 97%,
+        #FFF0 calc(97% + 1px) 100%
+    );
+}
+
+.govPic {
+    width: 13vmin;
+    height: 13vmin;
+    float: left;
+    margin-right: 1.25em;
+    background: linear-gradient(
+        var(--deg),
+        var(--dark) 0 70%,
+        var(--pink) 0 100%
+    );
+    transform: rotate(-4deg);
+    transition: var(--trans);
+    border-radius: 0.25em;
+    overflow: hidden;
+    margin-left: -3em;
+    padding: 0.5em;
+}
+
+.member:nth-of-type(even) .govPic {
+    --deg: -86deg;
+    float: right;
+    margin-left: 2em;
+    margin-right: -3em;
+    transform: rotate(4deg);
+}
+
+.govPic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.25em;
+    filter: grayscale(1);
+    background: var(--dark);
+}
+
+.member:hover {
+    transform: scale(1);
+    transition: var(--trans);
+    filter: drop-shadow(0px 20px 10px #0008);
+}
+
+.member:hover .govPic {
+    padding: 0.1em;
+    transition: var(--trans);
+    transform: rotate(-1deg);
+    --deg: 91deg
+}
+
+.member:nth-of-type(even):hover .govPic {
+    --deg: 91deg;
+}
+
+.member:hover .govPic img {
+    filter: none;
+    transition: var(--trans);
+}
+
+.govDesc {
+    padding-top: 1vmin;
+}
+
+.govDesc p {
+    padding: 0 2em;
+    margin-bottom: 1em;
+}
+
+h3 {
+    background: linear-gradient(128deg, #FFF0 60%, var(--dark) 0 100%);
+    display: inline;
+    transform: rotate(-2deg);
+    position: absolute;
+    margin: 0;
+    margin-top: 2.5em;
+    left: 9vmin;
+    padding: 0.5em 0.75em;
+    color: var(--pink);
+    border-radius: 0.25em;
+    font-size: 1.35em;
+    transform-origin: left bottom;
+}
+
+.member:nth-of-type(even) h3 {
+    left: inherit;
+    right: 9vmin;
+    transform: rotate(2deg);
+    transform-origin: right bottom;
+    background: linear-gradient(-182deg, #FFF0 60%, var(--dark) 0 100%);
+}
+
+.member:hover h3 {
+    transition: var(--trans);
+    transform: rotate(0deg);
+    background: linear-gradient(180deg, #FFF0 59%, var(--dark) 0 100%);
+}
+
+.govDesc p a {
+    display: inline-block;
+    margin: 0.5em 0 0 0;
+    background: var(--dark);
+    color: var(--pink);
+    padding: 0.1em 0.5em 0.35em;
+    border-radius: 0.5em;
+    text-decoration: none;
+    transition: var(--trans);
+}
+
+.govDesc p a:hover {
+    transition: var(--trans);
+    color: var(--dark);
+    background: var(--pink);
+    font-weight: bold;
+}
+
+.govDesc p a img {
+    float: left;
+    width: 22px;
+    filter: invert(1);
+    border-radius: 0.15em;
+    padding: 2px;
+    background: #FFF;
+    margin-right: 2px;
+}
+
+.ruler:after {
+    content: "GLORIEUSE DIRIGEANTE";
+    font-size: 0.75em;
+    position: absolute;
+    top: -1.5em;
+    background: var(--pink);
+    right: 4em;
+    transform: rotate(3deg);
+    padding: 0.35em 0.75em 0.5em;
+    border-radius: 0.25em;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.ruler:nth-of-type(even)::after {
+    right: inherit;
+    left: 4em;
+    transform: -3deg;
+}
+
+.mayor:after {
+    content: "MAIRESSE SUPREME";
+    font-size: 0.75em;
+    position: absolute;
+    top: -1.5em;
+    background: var(--pink);
+    right: 4em;
+    transform: rotate(3deg);
+    padding: 0.35em 0.75em 0.5em;
+    border-radius: 0.25em;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.mayor:nth-of-type(even)::after {
+    right: inherit;
+    left: 4em;
+    transform: -3deg;
+}
+
+.stratTaste:after {
+    content: "CONSEILLER";
+    font-size: 0.75em;
+    position: absolute;
+    top: -1.5em;
+    background: var(--pink);
+    right: 4em;
+    transform: rotate(3deg);
+    padding: 0.35em 0.75em 0.5em;
+    border-radius: 0.25em;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.stratTaste:nth-of-type(even)::after {
+    right: inherit;
+    left: 4em;
+    transform: -3deg;
+}
+
+.roadManager:after {
+    content: "MINISTRE";
+    font-size: 0.75em;
+    position: absolute;
+    top: -1.5em;
+    background: var(--pink);
+    right: 4em;
+    transform: rotate(3deg);
+    padding: 0.35em 0.75em 0.5em;
+    border-radius: 0.25em;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.roadManager:nth-of-type(even)::after {
+    right: inherit;
+    left: 4em;
+    transform: -3deg;
+}
+
+.humorCounselor:after {
+    content: "CONSEILLER";
+    font-size: 0.75em;
+    position: absolute;
+    top: -1.5em;
+    background: var(--pink);
+    right: 4em;
+    transform: rotate(3deg);
+    padding: 0.35em 0.75em 0.5em;
+    border-radius: 0.25em;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.humorCounselor:nth-of-type(even)::after {
+    right: inherit;
+    left: 4em;
+    transform: -3deg;
+}
+
+.cuteCounselor:after {
+    content: "CONSEILLERE";
+    font-size: 0.75em;
+    position: absolute;
+    top: -1.5em;
+    background: var(--pink);
+    right: 4em;
+    transform: rotate(3deg);
+    padding: 0.35em 0.75em 0.5em;
+    border-radius: 0.25em;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.cuteCounselor:nth-of-type(even)::after {
+    right: inherit;
+    left: 4em;
+    transform: -3deg;
+}
+
+#historyText {
+    font-family: "My Soul", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #C7037A;
+    text-align: center;
+}
+
+#historyStyle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#historyBack {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.historyTextBack {
+    background-color: rgba(119, 32, 183, 0.5);
+    color: white;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    width: 900px;
+    margin-bottom: 20px;
+}
+
+.govH2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.govP {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#historyContainer {
+    justify-content: center;
+    max-width: 1680px;
+    margin-left: 20px;
+}
+
+#picContainer {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#mainPageBranding {
+    max-width: 40vw;
+    max-height: 60vh;
+}
+
+#mainText {
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#mainSubText {
+    text-align: center;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#mainPageBack {
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--pink);
+}
+
+#cultBack {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#cultText {
+    font-family: "My Soul", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #C7037A;
+    text-align: center;
+}
+
+#cultContainer {
+    justify-content: center;
+    align-items: center;
+}
+
+.cultContent {
+    align-items: center;
+    justify-content: center;
+    background: rgba(119, 32, 183, 0.5);
+    width: 50vw;
+    padding: 20px;
+    color: wheat;
+}
